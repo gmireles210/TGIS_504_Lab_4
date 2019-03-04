@@ -12,8 +12,8 @@ html, body, #map {
 	top: 10px;
   	left: 55px;
 	z-index: 1000;
-    height: 40px;
-    width: 200px;
+    height: 35px;
+    width: 190px;
     text-decoration: none;
     text-align: center;
     color: black; 
@@ -26,8 +26,8 @@ html, body, #map {
 	top: 10px;
   	left: 260px;
 	z-index: 1000;
-    height: 40px;
-    width: 200px;
+    height: 35px;
+    width: 190px;
     text-decoration: none;
     text-align: center;
     color: black; 
