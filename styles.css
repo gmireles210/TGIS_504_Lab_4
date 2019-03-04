@@ -24,7 +24,7 @@ html, body, #map {
 .btn_b {
 	position: absolute;
 	top: 10px;
-  	left: 160px;
+  	left: 165px;
 	z-index: 1000;
     height: 40px;
     width: 100px;
