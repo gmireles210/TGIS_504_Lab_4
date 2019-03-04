@@ -7,6 +7,8 @@ html, body, #map {
     width: 100vw;
 }
 
+//thanks to onclick (event) button documenation for help with the buttons.
+
 .btn_a {
 	position: absolute;
 	top: 10px;
