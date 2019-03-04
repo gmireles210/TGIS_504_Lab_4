@@ -4,7 +4,7 @@ alert('If you give it permission, this web page will access to your location in 
 
 
 
-//Switches for Light and Dark:
+//Mapbox Light and Dark mode:
 
 var attr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -12,14 +12,14 @@ var attr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetM
 
     Url = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-var light   = L.tileLayer(Url, {id: 'mapbox.light', maxZoom:18, attribution: attr}),
-  dark  = L.tileLayer(Url, {id: 'mapbox.dark', maxZoom:18, attribution: attr});
+var dark  = L.tileLayer(Url, {id: 'mapbox.dark', maxZoom:18, attribution: attr}),
+    light   = L.tileLayer(Url, {id: 'mapbox.light', maxZoom:18, attribution: attr});
 
 var map = L.map('map', {
   layers:[light]}).fitWorld(); 
 var timelayers = {
-    "Light": light,
-    "Dark": dark
+    "Dark": dark,
+    "Light": light
   };
 L.control.layers(timelayers).addTo(map);
 
@@ -37,7 +37,7 @@ else{
 
 //Buttons!! 
 function infoFunction() {
-  alert('If you give it permission, this web page will access to your location in order to demonstrate how device sensors can interact with web maps.');
+  alert('If you give it permission, this web page will access your location in order to demonstrate how onboard device sensors interact with web maps.');
 }
 
 function locateFunction(){
@@ -49,23 +49,23 @@ function locateFunction(){
       timeout: 15000, 
       watch: false,
   })} else {
-    alert('Web page denied access to location.')
+    alert('Web page was denied access to location.')
   }  
 }
-function showPosition(position){ //Cannot call from onLocationFound function. 
+function showPosition(position){  
   alert('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude)
 }
 
 
 //the below JS code takes advantage of the Geolocate API as it is incorporated in the Leaflet JS API with the locate method
-function onLocationFound(e) { //this function does three things if the location is found: it defines a radius variable, adds a popup to the map, and adds a circle to the map.
+function onLocationFound(e) { //this function does three things if the location is found: it defines a radius variable, adds a circle to the map, and adds a popup to the map.
 
   var radius = e.accuracy / 2; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
 
   var coordinates = e.latlng.lat + ", " + e.latlng.lng
 
   L.marker(e.latlng).addTo(map)
-    .bindPopup("You are within " + radius + " meters of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng).openPopup();
+    .bindPopup("You are within " + radius + " Meters of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng).openPopup();
   //this adds a Leaflet popup to the map at the lat and long returned by the locate function. The text of the popup is defined here as well. Please change this text to specify what unit the radius is reported in.
 
   //L.circle(e.latlng, radius).addTo(map); // this adds a Leaflet circle to the map at the lat and long returned by the locate function. Its radius is set to the var radius defined above.
@@ -82,11 +82,12 @@ function onLocationFound(e) { //this function does three things if the location 
 function onLocationError(e) {
   alert(e.message);
 }
-//this function runs if the location is not found when the locate method is called. It produces an alert window that reports the error
+//this function runs if the location is not found when the locate method is called. It populates an alert window that reports the error
 
 //these are event listeners that call the functions above depending on whether or not the locate method is successful
-map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
+map.on('locationfound', onLocationFound);
+
 
 //This specifies that the locate method should run
 map.locate({
