@@ -35,7 +35,7 @@ else{
 }
 
 
-//Functions for Buttons!! 
+//Buttons!! 
 function infoFunction() {
   alert('If you give it permission, this web page will access to your location in order to demonstrate how device sensors can interact with web maps.');
 }
