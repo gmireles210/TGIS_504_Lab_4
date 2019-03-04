@@ -37,7 +37,7 @@ else{
 
 //Buttons!! 
 function infoFunction() {
-  alert('If you give it permission, this web page will access your location in order to demonstrate how onboard sensors on your device interact with web maps.');
+  alert('If you give it permission, this web page will access your location to demonstrate how onboard sensors inside your device interact with web maps.');
 }
 
 function locateFunction(){
