@@ -49,7 +49,7 @@ function locateFunction(){
       timeout: 15000, 
       watch: false,
   })} else {
-    alert('Web page was denied access to location.')
+    alert('User denied web page access to location.')
   }  
 }
 function showPosition(position){  
