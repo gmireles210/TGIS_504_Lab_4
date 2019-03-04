@@ -13,7 +13,7 @@ html, body, #map {
   	left: 55px;
 	z-index: 1000;
     height: 40px;
-    width: 100px;
+    width: 130px;
     text-decoration: none;
     text-align: center;
     color: black; 
@@ -27,7 +27,7 @@ html, body, #map {
   	left: 165px;
 	z-index: 1000;
     height: 40px;
-    width: 100px;
+    width: 130px;
     text-decoration: none;
     text-align: center;
     color: black; 
