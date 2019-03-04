@@ -37,7 +37,7 @@ else{
 
 //Buttons!! 
 function infoFunction() {
-  alert('If you give it permission, this web page will access your location in order to demonstrate how onboard device sensors interact with web maps.');
+  alert('If you give it permission, this web page will access your location in order to demonstrate how onboard sensors on your device interact with web maps.');
 }
 
 function locateFunction(){
@@ -65,7 +65,7 @@ function onLocationFound(e) { //this function does three things if the location 
   var coordinates = e.latlng.lat + ", " + e.latlng.lng
 
   L.marker(e.latlng).addTo(map)
-    .bindPopup("You are within " + radius + " Meters of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng).openPopup();
+    .bindPopup("You are within " + radius + " METERS of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng).openPopup();
   //this adds a Leaflet popup to the map at the lat and long returned by the locate function. The text of the popup is defined here as well. Please change this text to specify what unit the radius is reported in.
 
   //L.circle(e.latlng, radius).addTo(map); // this adds a Leaflet circle to the map at the lat and long returned by the locate function. Its radius is set to the var radius defined above.
