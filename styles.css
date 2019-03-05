@@ -9,11 +9,11 @@ html, body, #map {
 
 .btn_a {
 	position: absolute;
-	bottom: 15px;
+	bottom: 20px;
   	left: 15px;
 	z-index: 1000;
     height: 40px;
-    width: 130px;
+    width: 120px;
     text-decoration: none;
     text-align: center;
     color: black; 
@@ -23,11 +23,11 @@ html, body, #map {
 
 .btn_b {
 	position: absolute;
-	bottom: 15px;
+	bottom: 20px;
   	left: 155px;
 	z-index: 1000;
     height: 40px;
-    width: 130px;
+    width: 120px;
     text-decoration: none;
     text-align: center;
     color: black; 
