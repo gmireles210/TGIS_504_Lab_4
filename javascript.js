@@ -62,7 +62,7 @@ function onLocationFound(e) { //this function does three things if the location 
 
   var radius = e.accuracy / 2; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
   var r= radius.toFixed(2);
-  var coordinates = e.latlng.lat + ", " + e.latlng.lng
+  var coordinates = e.latlng.lat + ", " + e.latlng.lng;
 
   L.marker(e.latlng).addTo(map)
     .bindPopup("You are within " + radius + " METERS of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng).openPopup();
