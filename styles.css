@@ -10,7 +10,7 @@ html, body, #map {
 .btn_a {
 	position: absolute;
 	bottom: 10px;
-  	left: 55px;
+  	left: 35px;
 	z-index: 1000;
     height: 40px;
     width: 130px;
@@ -24,7 +24,7 @@ html, body, #map {
 .btn_b {
 	position: absolute;
 	bottom: 10px;
-  	left: 195px;
+  	left: 165px;
 	z-index: 1000;
     height: 40px;
     width: 130px;
