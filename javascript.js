@@ -85,8 +85,8 @@ function onLocationError(e) {
 //this function runs if the location is not found when the locate method is called. It populates an alert window that reports the error
 
 //these are event listeners that call the functions above depending on whether or not the locate method is successful
-map.on('locationerror', onLocationError);
 map.on('locationfound', onLocationFound);
+map.on('locationerror', onLocationError);
 
 
 //This specifies that the locate method should run
